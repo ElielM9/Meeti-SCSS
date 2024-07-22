@@ -1,0 +1,27 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.search-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include mix.tablet {
+    @include mix.grid(4, 2rem);
+  }
+
+  &__camp {
+    padding: 1rem;
+    border: 0.1rem solid lighten(var.$gray, 50%);
+    border-radius: 1rem;
+    outline: none;
+    background-color: var.$white;
+  }
+
+  &__btn {
+    @include mix.button(var.$primary-color, var.$white);
+    margin-top: 0;
+    padding: 1rem;
+  }
+}

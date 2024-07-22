@@ -1,0 +1,18 @@
+@use "config/variables" as var;
+
+.card-sidebar {
+  &__content {
+    background-color: var.$secondary-color;
+    padding: 2rem;
+  }
+
+  &__heading,
+  &__text {
+    color: var.$white;
+    margin: 1rem 0;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+}

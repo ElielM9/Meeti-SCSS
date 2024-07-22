@@ -1,0 +1,41 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.groups {
+  padding: 5rem 0;
+  background-image: linear-gradient(
+    to bottom,
+    var.$primary-color 0%,
+    var.$primary-color 50%,
+    var.$secondary-color 50%,
+    var.$secondary-color 100%
+  );
+  color: var.$white;
+
+  @include mix.tablet {
+    background-image: linear-gradient(
+      to right,
+      var.$primary-color 0%,
+      var.$primary-color 50%,
+      var.$secondary-color 50%,
+      var.$secondary-color 100%
+    );
+  }
+
+  &__grid {
+    @include mix.grid(1, 5rem);
+
+    @include mix.tablet {
+      @include mix.grid(2, 5rem);
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: var.$white;
+  }
+}

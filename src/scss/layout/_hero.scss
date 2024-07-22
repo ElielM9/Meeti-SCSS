@@ -1,0 +1,26 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.hero {
+  min-height: 60rem;
+  background-image: url(../assets/img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+
+  &__text {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__title {
+    max-width: 50rem;
+    color: var.$white;
+    text-align: center;
+  }
+
+  &__btn {
+    @include mix.button(var.$tertiary-color, var.$white);
+  }
+}

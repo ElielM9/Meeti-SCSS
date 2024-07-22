@@ -1,0 +1,11 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.search {
+  background-color: var.$lightGray;
+  padding: 5rem 0;
+
+  &__heading {
+    @include mix.heading;
+  }
+}
